@@ -1,5 +1,5 @@
 =====PT-BR=====
-*O codigo ainda não está aperfeiçoada*
+*O codigo ainda não está aperfeiçoado*
 Esse script permite testar payloads de xss "manualmente".
 Para isso, ele possui uma opcao "-s", a qual voce deve passar da seguinte maneira:
 >python handtesterxss.py <url?param=> -s
