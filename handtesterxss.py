@@ -18,9 +18,13 @@ def detectLine(url, back):
         headers = {'User-Agent': "Googlebot"}
 
         code = []
-        payload = sys.argv[3]
+        try:
+                payload = sys.argv[3]
+                r = requests.get(f"{url}{payload}", headers=headers)
+        except:
+                r = requests.get(f"{url}", headers=headers)
 
-        r = requests.get(f"{url}{payload}", headers=headers)
+
         lines = r.text.replace("\t", "")
         liners = lines.split("\n")
         for line in liners:
@@ -35,10 +39,10 @@ def detectLine(url, back):
 
 if len(sys.argv) < 3 and sys.argv[-1] != "-s":
         howUse()
-        exit()
+
 elif sys.argv[-1] == "-s":
         detectLine(sys.argv[1], 1)
-        exit()
+
 
 codeLines = detectLine(sys.argv[1], 0)
 numberLines = []
@@ -53,4 +57,3 @@ for nl in numberLines:
         for cl in range(0, len(codeLines)):
                 if int(nl) == cl:
                         print(f"{codeLines[cl]}")
-
