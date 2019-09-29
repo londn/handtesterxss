@@ -1,4 +1,5 @@
 =====PT-BR=====
+*O codigo ainda não está aperfeiçoada*
 Esse script permite testar payloads de xss "manualmente".
 Para isso, ele possui uma opcao "-s", a qual voce deve passar da seguinte maneira:
 >python handtesterxss.py <url?param=> -s
@@ -9,6 +10,7 @@ python handtesterxss.py <url?param=> <linhas> <payload>
 
 
 =====ENG=====
+* The code is not yet perfected *
 This script allows you to test xss payloads "manually".
 To do so, it has a "-s" option, which you must pass as follows:
 >python handtesterxss.py <url?param=> -s
